@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://conrad-r-hoffman.github.io/post/welcome-message/</loc>
+    <lastmod>2017-11-30T03:23:50-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://conrad-r-hoffman.github.io/authors/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://conrad-r-hoffman.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://conrad-r-hoffman.github.io/</loc>
+    <lastmod>2017-11-30T03:23:50-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://conrad-r-hoffman.github.io/tags/hugo/</loc>
+    <lastmod>2017-11-30T03:23:50-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://conrad-r-hoffman.github.io/categories/others/</loc>
+    <lastmod>2017-11-30T03:23:50-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://conrad-r-hoffman.github.io/post/</loc>
+    <lastmod>2017-11-30T03:23:50-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://conrad-r-hoffman.github.io/tags/small-talk/</loc>
+    <lastmod>2017-11-30T03:23:50-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://conrad-r-hoffman.github.io/tags/</loc>
+    <lastmod>2017-11-30T03:23:50-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

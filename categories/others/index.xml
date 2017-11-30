@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Others on Hez</title>
+    <link>https://conrad-r-hoffman.github.io/categories/others/</link>
+    <description>Recent content in Others on Hez</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Nov 2017 03:23:50 -0700</lastBuildDate>
+    
+	<atom:link href="https://conrad-r-hoffman.github.io/categories/others/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Welcome to my new website</title>
+      <link>https://conrad-r-hoffman.github.io/post/welcome-message/</link>
+      <pubDate>Thu, 30 Nov 2017 03:23:50 -0700</pubDate>
+      
+      <guid>https://conrad-r-hoffman.github.io/post/welcome-message/</guid>
+      <description>Welcome I&amp;rsquo;m very happy to introduce my new website! It&amp;rsquo;s a static website that I have done in less than 3 hours with this Hugo tutorial</description>
+    </item>
+    
+  </channel>
+</rss>

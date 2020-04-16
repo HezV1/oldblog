@@ -1,117 +1,22 @@
-<!DOCTYPE html>
-<html lang='en'>
-
-<head>
-  <meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Hez static site'>
-
-<meta property='og:title' content='Hez'>
-<meta property='og:description' content='Hez static site'>
-<meta property='og:url' content='https://conrad-r-hoffman.github.io/'>
-<meta property='og:site_name' content='Hez'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2017-11-30T03:23:50-07:00'/><meta name='twitter:card' content='summary'>
-
-<meta name="generator" content="Hugo 0.31.1" />
-
-  <title>Hez</title>
-  <link rel='canonical' href='https://conrad-r-hoffman.github.io/'>
-  
-    <link href="https://conrad-r-hoffman.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Hez" />
-  
-  
-  <link rel='icon' href='/favicon.ico'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
-<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
-</head>
-
-
-<body class='home type-page'>
-  <div class='site'>
-
-    <a class='screen-reader' href='#main'>Skip to Content</a>
-
-    <header id='header' class='header-container'>
-      <div class='header site-header'>
-        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
-  <ul class='main-menu'>
-  <li>
-      <a href='https://conrad-r-hoffman.github.io'>Blog</a>
-    </li>
-  
-  </ul>
-</nav>
-
-        <div class='header-info'>
+LHC Vanilla
+<div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AYuaPx8YSTFedoB1Vhkj34xp7jP1Oe006YqoZRMek5SjAJONH3-_IVNUkC4OKcFs5wpaymlT-NNegVtY&vault=true" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'blue',
+          layout: 'vertical',
+          label: 'subscribe',
           
-          <h1 class='site-title title'>Hez</h1>
-          
-          <p class='site-description subtitle'>Hez static site</p>
-        </div>
-      </div>
-    </header>
-
-
-<main id='main' class='main'>
-  
-
-  <div class='home-sections-container'>
-    <div class='home-sections'>
-      <section id='recent-posts' class='home-section'>
-  <header>
-    <h2 class='home-section-title title'>Recent Posts</h2>
-  </header>
-
-  <div class='list-container'>
-    <ul class='list'>
-    
-      <li class='list-item'>
-  <article>
-    <div class='meta'>
-      <span>
-  <span class='screen-reader'>Posted on </span>
-  <time datetime='2017-11-30T03:23:50-07:00'>2017, Nov 30</time>
-</span>
-
-    </div>
-
-    <header class='list-item-header'>
-      <h3 class='list-item-title'>
-        <a href='/post/welcome-message/'>Welcome to my new website</a>
-      </h3>
-    </header>
-  </article>
-</li>
-
-    
-    </ul>
-  </div>
-</section>
-
-    </div>
-  </div>
-</main>
-
-    <footer id='footer' class='footer-container'>
-      <div class='footer'>
-        <div class='social-menu-container'>
-  <nav aria-label='Social Menu'>
-    <ul class='social-menu'></ul>
-  </nav>
-</div>
-        <div class='copyright'>
-  <p>
-        
-      
-
-       &copy; 2017 Conrad Hoffman 
-  </p>
-</div>
-
-      </div>
-    </footer>
-
-  </div><script src='/assets/js/main.5871befd.js'></script><script src='/js/custom.js'></script></body>
-
-</html>
-
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          'plan_id': 'P-0GS56049F0991193AL2L7HZQ'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID);
+      }
+  }).render('#paypal-button-container');
+</script>

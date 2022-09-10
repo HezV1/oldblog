@@ -1,3 +1,6 @@
+---
+author: 'Hez'
+---
 **Goal:** Give a walkthrough of the HTB Starting Point boxes shooting for a layman-level technical explanation.
 
 HTB has one of the best learning platforms for offensive security, so I'll use it as a guide for brushing up on my pentesting chops. I'll make writeups for each box to document my work, structure my thoughts, and maybe provide some value for a future reader. So, starting with the first box, nibbles.   

@@ -20,7 +20,7 @@ Very cool, nmap.
 
 Onto the actual scan
 
-```shell
+```bash
 $ nmap -sV --open -oA nibbles_initial_scan 10.129.200.170
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-09 03:32 CDT
 Nmap scan report for 10.129.200.170
@@ -39,7 +39,7 @@ Nmap done: 1 IP address (1 host up) scanned in 10.76 seconds
 
 So we have OpenSSH listening on port 22 and an Apache server listening on port 80. We also have our files from the scan in `.gnmap`, `.nmap`, and `.xml` formats. 
 
-HTB Academy also recommends we do full TCP port scan with `nmap -p- --open -oA nibbles_full_tcp_scan <ip address>`. using `-p-` to specify all ports. While this might seem redundant, I think HTBA is trying to ingrain a habit of running longer scans in the background, which is good. The concept transfers over to other tools as well. If we can configure it, we should use shorter tasks while we're actively working and later run longer background tasks while doing other active work.
+HTB Academy also recommends we do full TCP port scan with `nmap -p- --open -oA nibbles_full_tcp_scan <ip address>`. using `-p-` to specify all ports. While this might seem redundant, I think HTBA is trying to ingrain a habit of running longer scans in the background, which is good. The concept transfers over to other tools as well. If we can configure it, we should use shorter tasks while actively working and later run longer background tasks while doing other active work.
 
 In this case, the full port scan doesn't find anything more.
 
@@ -103,4 +103,4 @@ Nmap done: 1 IP address (1 host up) scanned in 20.70 seconds
 
 The script only added the `http-server-header` line, which doesn't tell us anything we didn't already know. 
 
-Regarding our recon phase, we've got a good amount of info about what is on the host. So the next step is more recon. We will dive into the services we identified and do more detailed recon, starting with the web server.
+Regarding our recon phase, we've got a good amount of info about what is on the host. So the next step is more recon. We will dive into the identified services and do more detailed recon, starting with the web server.

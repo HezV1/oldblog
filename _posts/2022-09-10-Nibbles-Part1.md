@@ -20,7 +20,7 @@ Very cool, nmap.
 
 Onto the actual scan
 
-```bash
+```shell
 $ nmap -sV --open -oA nibbles_initial_scan 10.129.200.170
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-09 03:32 CDT
 Nmap scan report for 10.129.200.170
@@ -45,7 +45,7 @@ In this case, the full port scan doesn't find anything more.
 
 Next up - NC for some banner grabbing
 
-```bash
+```shell
 $ nc -nv 10.129.200.170 22
 10.129.200.170 22 (ssh) open
 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.2
@@ -53,7 +53,7 @@ SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.2
 
 Confirms what nmap told us about the SSH server.
 
-```Bash
+```shell
 $ nc -nv 10.129.200.170 80
 10.129.200.170 80 (http) open
 ```
@@ -62,7 +62,7 @@ Confirms that port 80 is open, but we don't get a banner out of the web server.
 
 Now that we know we're going to be focusing on ports 22 and 80, we can go ahead and run a more detailed nmap scan. `nmap -sC -p 22,80 -oA nibbles_script_scan <ip_address>` will run a nmap script scan with `sC` and just on those 2 ports. This will use a default set of scripts built into nmap to do more detailed service enumeration.
 
-```Shell
+```shell
 $  nmap -sC -p 22,80 -oA nibbles_script_scan 10.129.200.170
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-10 03:26 CDT
 Nmap scan report for 10.129.200.170
@@ -84,7 +84,7 @@ From this, we don't get much extra. We get the ssh server's public host key and 
 
 Last step for enumeration, we can use a specific nmap script that isn't included in the default scripts when we use `-sC`. `nmap -sV --script=http-enum -oA nibbles_nmap_http_enum <ip_address>` running a version scan with the `http-enum` script.
 
-```Shell
+```shell
 $ nmap -sV --script=http-enum -oA nibbles_nmap_http_enum 10.129.200.170
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-10 03:33 CDT
 Nmap scan report for 10.129.200.170

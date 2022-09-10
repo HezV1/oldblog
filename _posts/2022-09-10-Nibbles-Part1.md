@@ -1,5 +1,6 @@
 ---
-author: 'Hez'
+author: Hez
+tags: walkthrough nibbles HTB
 ---
 **Goal:** Give a walkthrough of the HTB Starting Point boxes shooting for a layman-level technical explanation.
 

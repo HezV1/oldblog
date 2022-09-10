@@ -13,8 +13,8 @@ Operating System - Linux
 Difficulty - Easy
 User Path - Web
 Privilege Escalation - World-writable File / Sudoers Misconfiguration
-Ippsec Video - [https://www.youtube.com/watch?v=s_0GcRGv6Ds](https://www.youtube.com/watch?v=s_0GcRGv6Ds)
-Walkthrough - [https://0xdf.gitlab.io/2018/06/30/htb-nibbles.html](https://0xdf.gitlab.io/2018/06/30/htb-nibbles.html)
+Ippsec Video - https://www.youtube.com/watch?v=s_0GcRGv6Ds
+Walkthrough - https://0xdf.gitlab.io/2018/06/30/htb-nibbles.html
 ```
 
 ## Recon

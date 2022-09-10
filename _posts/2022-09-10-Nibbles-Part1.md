@@ -6,6 +6,7 @@ author: 'Hez'
 HTB has one of the best learning platforms for offensive security, so I'll use it as a guide for brushing up on my pentesting chops. I'll make writeups for each box to document my work, structure my thoughts, and maybe provide some value for a future reader. So, starting with the first box, nibbles.   
 
 # Nibbles
+```
 Creator - mrb3n
 Operating System - Linux
 Difficulty - Easy
@@ -13,6 +14,7 @@ User Path - Web
 Privilege Escalation - World-writable File / Sudoers Misconfiguration
 Ippsec Video - [https://www.youtube.com/watch?v=s_0GcRGv6Ds](https://www.youtube.com/watch?v=s_0GcRGv6Ds)
 Walkthrough - [https://0xdf.gitlab.io/2018/06/30/htb-nibbles.html](https://0xdf.gitlab.io/2018/06/30/htb-nibbles.html)
+```
 
 ## Recon
 Recommended scan from the HTBA module is `nmap -sV --open -oA nibbles_initial_scan <ip address>` doing a *version scan* `-sV` to have nmap output what version of each service is listening on every `--open` port. Saving the result with `-oA` is also a good habit.

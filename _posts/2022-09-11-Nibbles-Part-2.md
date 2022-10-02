@@ -6,7 +6,7 @@ tags: walkthrough nibbles HTB
 # Web Fingerprinting
 Focusing now on the web server running on port 80, the first suggestion from HTBA is to run `whatweb` to try and enumerate what web technologies are present on the web server.
 
-```Shell
+```shell
 $ whatweb 10.129.202.255 
 http://10.129.202.255 [200 OK] Apache[2.4.18], Country[RESERVED][ZZ], HTTPServer[Ubuntu Linux][Apache/2.4.18 (Ubuntu)], IP[10.129.202.255]
 ```
@@ -29,7 +29,7 @@ HTBA also suggests pulling the page source locally with cURL: `curl HTTP://<targ
 
 Now that we do know a directory that's probably interesting, it's a good idea to re-run the recon steps we did before, so we'll re-run `whatweb` on our newly discovered directory. It's also important to know that `whatweb` doesn't spider or try to find these hidden directories, so it only works with what you give it. Yet another reason to have a good grasp on what your tool is doing.
 
-```Shell
+```shell
 $ whatweb http://10.129.202.255/nibbleblog
 http://10.129.202.255/nibbleblog [301 Moved Permanently] Apache[2.4.18], Country[RESERVED][ZZ], HTTPServer[Ubuntu Linux][Apache/2.4.18 (Ubuntu)], IP[10.129.202.255], RedirectLocation[http://10.129.202.255/nibbleblog/], Title[301 Moved Permanently]
 http://10.129.202.255/nibbleblog/ [200 OK] Apache[2.4.18], Cookies[PHPSESSID], Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][Apache/2.4.18 (Ubuntu)], IP[10.129.202.255], JQuery, MetaGenerator[Nibbleblog], PoweredBy[Nibbleblog], Script, Title[Nibbles - Yum yum]
@@ -61,7 +61,7 @@ Answers for these, we can hopefully find in the exploit code.
 
 We see some options towards the start.
 
-```Ruby
+```ruby
 register_options(
 [
 OptString.new('TARGETURI', [true, 'The base path to the web application', '/']),
@@ -74,7 +74,7 @@ Indicating we'll need to tell Metasploit our credentials, and Metasploit will lo
 
 We also see the URI being used later here.
 
-```Ruby
+```ruby
 res = send_request_cgi(
 'method' => 'GET',
 'uri' => normalize_uri(target_uri.path, 'admin.php'),
@@ -90,7 +90,7 @@ Telling us that there should be an admin.php page somewhere. Probably where we'r
 
 Skipping over a chunk of code that looks like it handles authenticating and preparing our payload, we see this.
 
-```Ruby
+```ruby
 vprint_status("Uploading payload...")
 res = send_request_cgi(
 'method' => 'POST',
@@ -120,7 +120,7 @@ Directory brute-forcing with `Gobuster` will find the common ones.
 
 You've got plenty of options for Wordlists. If you have access to the internet on your engagement, Daniel Messler's [SecLists](https://github.com/danielmiessler/SecLists) is very well recommended and maintained at the time of writing. (He also has a fantastic newsletter if you're into that kind of thing)
 
-```Shell
+```shell
 $ gobuster dir -u http://10.129.203.82/nibbleblog/ --wordlist /usr/share/dirb/wordlists/common.txt
 ===============================================================
 Gobuster v3.1.0
